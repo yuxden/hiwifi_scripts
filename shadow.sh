@@ -23,26 +23,35 @@ echo 'Done! 下载完成'
 echo '
 '
 sleep 1
+echo '#############################################################'
 echo 'Installing... 安装ing'
-tar xzvf ss.tar.gz;
 echo ''
-echo '***************************'
+echo '-------------------------------------------------------------'
+echo 'Unpacking... 释放安装文件ing'
+tar xzvf ss.tar.gz;
+echo '-------------------------------------------------------------'
+echo ''
+echo 'Done! Getting SS config panel ready for Gee4... 升级ing...'
+echo ''
+echo '****************************'
 echo 'We are at ' $(pwd) 'with '
-echo '***************************'
+echo '****************************'
 echo '____________________________________________________________________'
 ls
 echo '____________________________________________________________________'
+echo ''
 cp /tmp/geewan/shadowsocks.htm /usr/lib/lua/luci/view/admin_web/network/
 cp /tmp/geewan/index.htm /usr/lib/lua/luci/view/admin_web/network/
 cp /tmp/geewan/style.css /www/turbo-static/turbo/web/css/
 cp /tmp/geewan/ss-* /usr/bin/
+echo ''
 echo 'Done! 插件安装成功!'
-echo '
-'
+echo '#############################################################'
 sleep 1
+echo ''
+echo ''
 echo 'Writing uninstall info... 写入卸载信息ing'
-echo '
-'
+echo ''
 echo '
 ' >>/usr/lib/opkg/status
 echo 'Package: geewan-ss' >>/usr/lib/opkg/status
@@ -66,3 +75,4 @@ else echo 'luci-cache does not exist! 无法找到luci-cache,请确定是否是�
 fi
 sleep 1
 echo 'Done! 插件成功安装!'
+echo ''
