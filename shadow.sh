@@ -3,9 +3,10 @@
 echo ''
 echo '===================================='
 echo 'Started installation'
+echo '..........jm33_m0'
 echo '===================================='
 echo ''
-sleep 3 
+sleep 1 
 echo 'Creating temp directory... 创建临时目录ing...'
 echo ''
 mkdir /tmp/geewan
@@ -13,7 +14,7 @@ cd /tmp/geewan
 echo 'Done! 成功创建临时目录!'
 echo '
 '
-sleep 3
+sleep 1
 echo 'Downloading files... 下载插件ing'
 echo '
 '
@@ -21,17 +22,24 @@ curl -k -o ss.tar.gz https://jm33.me/files/ss.tar.gz
 echo 'Done! 下载完成'
 echo '
 '
-sleep 2
+sleep 1
 echo 'Installing... 安装ing'
 tar xzvf ss.tar.gz;
-cp ../shadowsocks.htm /usr/lib/lua/luci/view/admin_web/network/
-cp ../index.htm /usr/lib/lua/luci/view/admin_web/network/
-cp ../style.css /www/turbo-static/turbo/web/css/
-cp ../ss-* /usr/bin/
+echo ''
+echo '***************************'
+echo 'We are at ' $(pwd) 'with '
+echo '***************************'
+echo '____________________________________________________________________'
+ls
+echo '____________________________________________________________________'
+cp /tmp/geewan/shadowsocks.htm /usr/lib/lua/luci/view/admin_web/network/
+cp /tmp/geewan/index.htm /usr/lib/lua/luci/view/admin_web/network/
+cp /tmp/geewan/style.css /www/turbo-static/turbo/web/css/
+cp /tmp/geewan/ss-* /usr/bin/
 echo 'Done! 插件安装成功!'
 echo '
 '
-sleep 2
+sleep 1
 echo 'Writing uninstall info... 写入卸载信息ing'
 echo '
 '
