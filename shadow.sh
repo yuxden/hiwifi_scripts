@@ -28,22 +28,8 @@ echo 'Installing... 安装ing'
 echo ''
 echo '-------------------------------------------------------------'
 echo 'Unpacking... 释放安装文件ing'
-tar xzvf ss.tar.gz;
+tar xzvf ss.tar.gz -C /;
 echo '-------------------------------------------------------------'
-echo ''
-echo 'Done! Getting SS config panel ready for Gee4... 升级ing...'
-echo ''
-echo '****************************'
-echo 'We are at ' $(pwd) 'with '
-echo '****************************'
-echo '____________________________________________________________________'
-ls
-echo '____________________________________________________________________'
-echo ''
-cp /tmp/geewan/shadowsocks.htm /usr/lib/lua/luci/view/admin_web/network/
-cp /tmp/geewan/index.htm /usr/lib/lua/luci/view/admin_web/network/
-cp /tmp/geewan/style.css /www/turbo-static/turbo/web/css/
-cp /tmp/geewan/ss-* /usr/bin/
 echo ''
 echo 'Done! 插件安装成功!'
 echo '#############################################################'
