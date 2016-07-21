@@ -14,7 +14,7 @@ fi
 cron=/var/spool/cron/crontabs/root
 grep conn_chk.sh $cron > /dev/null
 if [ $? -eq 1 ]; then
-    echo '*/10 * * * * /etc/init.d/conn_chk.sh' >> $cron
+e    echo '*/10 * * * * /etc/init.d/conn_chk.sh' >> $cron
 fi
 
 pidof ss-redir > /dev/null

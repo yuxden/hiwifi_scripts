@@ -12,7 +12,7 @@
 
 ##How to install
 
->如果你希望看到源码，请点击[Github](https://github.com/jm33-m0/router_scripts/)。以下仅仅是安装指导
+>如果你希望看到源码，请点击[Github](https://github.com/jm33-m0/hiwifi_scripts/)。以下仅仅是安装指导
 
 ###Step 1. 开启极路由开发者模式
 
