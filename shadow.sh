@@ -41,7 +41,7 @@ echo ''
 echo '
 ' >>/usr/lib/opkg/status
 echo 'Package: geewan-ss' >>/usr/lib/opkg/status
-echo 'Version: master-20130924-eb9d31869e1d7590cd8c2fb1e7d226ac6cf32fad-20141024' >>/usr/lib/opkg/status
+echo 'Version: 20160731' >>/usr/lib/opkg/status
 echo 'Provides:' >>/usr/lib/opkg/status
 echo 'Status: install hold installed' >>/usr/lib/opkg/status
 echo 'Architecture: ralink' >>/usr/lib/opkg/status
