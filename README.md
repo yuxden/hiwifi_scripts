@@ -26,7 +26,7 @@
 
     ![](https://jm33.me/img/ss1.png)
 
-    ![](https://jm33.me/img/ss2.png)
+    ![](https://jm33.me/img/ss.png)
 
 - `rm.sh`
 
