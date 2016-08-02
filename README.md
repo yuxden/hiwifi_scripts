@@ -24,6 +24,10 @@
 
     安装Shadowsocks插件，请参考[jm33_m0 - 极路由4使用Shadowsocks插件（含web配置面板）](https://jm33.me/ji-lu-you-4shi-yong-shadowsockscha-jian-han-webpei-zhi-mian-ban.html)
 
+    ![](https://jm33.me/img/ss1.png)
+
+    ![](https://jm33.me/img/ss2.png)
+
 - `rm.sh`
 
     清除远程调试功能
