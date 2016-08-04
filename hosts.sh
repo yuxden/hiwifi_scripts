@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo '
+[*] Usage: '$0 '<RET>
+'
+
 # tests if a cron job has been created already
 grep "hosts" /etc/crontabs/root > /dev/null
 if [ $? -eq 1 ]; then

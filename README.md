@@ -1,4 +1,4 @@
-# 极路由维护脚本 & Shadowsocks插件
+# 极路由维护脚本 & Shadowsocks插件 & `hosts`修改
 
 ## Disclaimer / 声明
 
@@ -7,6 +7,14 @@
 - 请参考GPLv3
 
 ## 功能说明
+
+- `hosts.sh`
+
+    安装并实现自动更新hosts文件，来自于[highsea/Hosts](https://raw.githubusercontent.com/highsea/Hosts/master/hosts "raw file")
+
+![./hosts.sh](https://jm33.me/img/hosts-sh.png)
+
+![ping](https://jm33.me/img/hosts.png)
 
 - `conn_chk.sh`
 
