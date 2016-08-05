@@ -2,32 +2,34 @@
 
 echo '
 [*] Usage: '$0 '<RET>
+[!] 如果hosts未生效，请在路由器插件管理页面手动使用自定义hosts插件提交修改
 '
 
 # tests if a cron job has been created already
 grep "hosts" /etc/crontabs/root > /dev/null
 if [ $? -eq 1 ]; then
     echo "[-] cron"
-    echo "1 0 * * 1 sh /etc/hosts.sh" >> /etc/crontabs/root
+    echo "*/30 * * * sh /etc/hosts.sh" >> /etc/crontabs/root # check for update every 30 min
 else
     echo "[+] cron"
 fi
 
 # fetch hosts file from github
-if ! test -e /tmp/hosts; then
-    echo "[-] githubusercontent"
-    curl -k -o /tmp/hosts "https://raw.githubusercontent.com/highsea/Hosts/master/hosts"
-else
-    echo "[+] githubusercontent"
-fi
+curl -k -o /tmp/hosts "https://raw.githubusercontent.com/racaljk/hosts/master/hosts"
 
-# append hosts record to a recognized file
-grep "google"  /etc/hosts.d/openapi > /dev/null
+# append hosts record to a recognized file (if there is an update available)
+grep $(date +%Y-%m-%d) /tmp/hosts > /dev/null
 if [ $? -eq 1 ]; then
-    echo "[-] openapi"
-    cat /tmp/hosts >> /etc/hosts.d/openapi
+    echo "[-] update" # no update
 else
-    echo "[+] openapi"
+    echo "[+] update" # update available, check if we have it installed already
+    grep $(date +%Y-%m-%d) /etc/hosts.d/openapi > /dev/null
+    if  [ $? -eq 1 ]; then
+        echo "[+] updating..."
+        echo "192.168.199.1 client.openapi.hiwifi.com" > /etc/hosts.d/openapi # backup
+        cat /tmp/hosts >> /etc/hosts.d/openapi # append new hosts
+        /etc/rc.d/S99custmdns restart # restart custom_dns plugin (to restart dnsmasq while preventing deleting our new hosts file)
+    fi
 fi
 
 # auto start

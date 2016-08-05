@@ -10,7 +10,7 @@
 
 - `hosts.sh`
 
-    安装并实现自动更新hosts文件，来自于[highsea/Hosts](https://raw.githubusercontent.com/highsea/Hosts/master/hosts "raw file")
+    安装并实现自动更新hosts文件，来自于[racaljk/hosts](https://raw.githubusercontent.com/racaljk/hosts/master/hosts "raw file")
 
 ![./hosts.sh](https://jm33.me/img/hosts-sh.png)
 
