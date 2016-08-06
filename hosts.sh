@@ -8,10 +8,10 @@ echo '
 # tests if a cron job has been created already
 grep "hosts" /etc/crontabs/root > /dev/null
 if [ $? -eq 1 ]; then
-    echo `date`": [-] cron"
+    echo `date`": [-] cron" >> /var/log/hosts.log
     echo "*/30 * * * sh /etc/hosts.sh" >> /etc/crontabs/root # check for update every 30 min
 else
-    echo `date`": [+] cron"
+    echo `date`": [+] cron" >> /var/log/hosts.log
 fi
 
 # fetch hosts file from github
@@ -20,12 +20,12 @@ curl -k -o /tmp/hosts "https://raw.githubusercontent.com/racaljk/hosts/master/ho
 # append hosts record to a recognized file (if there is an update available)
 grep $(date +%Y-%m-%d) /tmp/hosts > /dev/null
 if [ $? -eq 1 ]; then
-    echo `date`": [-] update" # no update
+    echo `date`": [-] update" >> /var/log/hosts.log # no update
 else
-    echo `date`": [+] update" # update available, check if we have it installed already
+    echo `date`": [+] update" >> /var/log/hosts.log # update available, check if we have it installed already
     grep $(date +%Y-%m-%d) /etc/hosts.d/openapi > /dev/null
     if  [ $? -eq 1 ]; then
-        echo `date`": [+] updating..."
+        echo `date`": [+] updating..." >> /var/log/hosts.log
         echo "192.168.199.1 client.openapi.hiwifi.com" > /etc/hosts.d/openapi # backup
         cat /tmp/hosts >> /etc/hosts.d/openapi # append new hosts
         /etc/rc.d/S99custmdns restart # restart custom_dns plugin (to restart dnsmasq while preventing deleting our new hosts file)
@@ -35,14 +35,14 @@ fi
 # auto start
 if ! test -e /etc/$0; then
     cp $0 /etc/
-    echo `date`": [-] etc"
+    echo `date`": [-] etc" >> /var/log/hosts.log
 else
-    echo `date`": [+] etc"
+    echo `date`": [+] etc" >> /var/log/hosts.log
 fi
 grep "hosts" /etc/rc.local > /dev/null
 if [ $? -eq 1  ]; then
-    echo `date`": [-] Auto start"
+    echo `date`": [-] Auto start" >> /var/log/hosts.log
     echo "sh /etc/"$0 > /etc/rc.local && echo "exit 0" >> /etc/rc.local
 else
-    echo `date`": [+] Auto start"
+    echo `date`": [+] Auto start" >> /var/log/hosts.log
 fi
