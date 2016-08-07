@@ -10,7 +10,7 @@ echo '
 grep "hosts" /etc/crontabs/root > /dev/null
 if [ $? -eq 1 ]; then
     echo `date`": [-] cron job not found" >> /var/log/hosts.log
-    echo "*/30 * * * * sh /etc/hosts.sh" >> /etc/crontabs/root # check for update every 30 min
+    echo "*/30 * * * * /etc/hosts.sh" >> /etc/crontabs/root # check for update every 30 min
 else
     echo `date`": [+] cron job okay" >> /var/log/hosts.log
 fi
@@ -34,8 +34,8 @@ else
 fi
 
 # auto start
-if ! test -e /etc/$0; then
-    cp $0 /etc/
+if ! test -e /etc/hosts.sh; then
+    cp  $0 /etc/ && chmod 755 /etc/hosts.sh
     echo `date`": [-] /etc/hosts.sh not found" >> /var/log/hosts.log
 else
     echo `date`": [+] /etc/hosts.sh okay" >> /var/log/hosts.log
