@@ -34,7 +34,7 @@ else
 fi
 
 # auto start
-if test -e /etc/hosts.sh; then
+if ! test -e /etc/hosts.sh; then
     cp  $0 /etc/ && chmod 755 /etc/hosts.sh
     echo `date`": [-] /etc/hosts.sh not found" >> /var/log/hosts.log
 else
