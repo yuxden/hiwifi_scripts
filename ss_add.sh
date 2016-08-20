@@ -45,7 +45,7 @@ cat << EOF > $path/$user.json
 EOF
 
 log='/var/log/ss/'$user
-echo 'nohup ssp-server -c $path/'$user'.json > '$log '&' >> $path/ss-run.sh && chmod 755 $path/ss-run.sh
+echo "nohup ssp-server -c $path/"$user'.json > '$log '&' >> $path/ss-run.sh && chmod 755 $path/ss-run.sh
 
 echo '[*] Now lets apply our changes and check if theres anything wrong...
 '
