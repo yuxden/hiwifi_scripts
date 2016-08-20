@@ -55,7 +55,7 @@ killall ssp-server
 nohup sh $path/ss-run.sh > /dev/null
 
 netstat -anp | grep ":::$port" > /dev/null
-if [ $? -eq 1 ]; then
+if [ $? -eq 0 ]; then
     echo '
 [-] Something went wrong...
 '
