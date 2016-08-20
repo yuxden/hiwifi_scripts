@@ -54,7 +54,7 @@ echo '
 killall ssp-server
 nohup sh $path/ss-run.sh > /dev/null
 
-netstat -anp | grep "0.0.0.0:$port" > /dev/null
+netstat -anp | grep ":::$port" > /dev/null
 if [ $? -eq 1 ]; then
     echo '
 [-] Something went wrong...
