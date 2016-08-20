@@ -8,6 +8,10 @@
 
 ## 功能说明
 
+- `ss_install.sh`
+
+    Copy&paste `wget https://raw.githubusercontent.com/jm33-m0/gfw_scripts/master/ss_install.sh && bash ss_install.sh`
+
 - `hosts.sh`
 
     安装并实现自动更新hosts文件，来自于[racaljk/hosts](https://raw.githubusercontent.com/racaljk/hosts/master/hosts "raw file")
