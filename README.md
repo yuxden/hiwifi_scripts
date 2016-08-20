@@ -1,4 +1,5 @@
-# 极路由维护脚本 & Shadowsocks插件 & `hosts`修改
+# gfw-script
+## 适应症：GFW
 
 ## Disclaimer / 声明
 
@@ -10,7 +11,13 @@
 
 - `ss_install.sh`
 
-    Copy&paste `wget https://raw.githubusercontent.com/jm33-m0/gfw_scripts/master/ss_install.sh && bash ss_install.sh`
+    这是一个在Linux服务器上自动安装Shadowsocks-Plus的脚本，复制粘贴
+    `wget https://raw.githubusercontent.com/jm33-m0/gfw_scripts/master/ss_install.sh && bash ss_install.sh`，根据提示操作
+
+- `ss_add.sh`
+
+    用于添加SS用户，可以交互式输入配置，也可以用于一键批量添加，
+    `./ss_add.sh -i`会使用交互模式，`./ss_add.sh <user> <port> <password>`是一键模式
 
 - `hosts.sh`
 
