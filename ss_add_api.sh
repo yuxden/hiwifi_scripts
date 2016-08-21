@@ -8,7 +8,7 @@ if ! test -e ~/ss; then
 "
     mkdir -p ~/ss
 fi
-path="~/ss"
+path=~/ss
 
 # Check if our SSP instance is running fine, if not, launch it
 ps -ef | grep "ssp-server" > /dev/null
