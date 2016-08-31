@@ -9,16 +9,6 @@
 
 ## 功能说明
 
-- `ss_install.sh`
-
-    这是一个在Linux服务器上自动安装Shadowsocks-Plus的脚本，复制粘贴
-    `wget https://raw.githubusercontent.com/jm33-m0/gfw_scripts/master/ss_install.sh && bash ss_install.sh`，根据提示操作
-
-- `ss_add.sh`
-
-    用于添加SS用户，可以交互式输入配置，也可以用于一键批量添加，
-    `./ss_add.sh -i`会使用交互模式，`./ss_add.sh <user> <port> <password>`是一键模式
-
 - `hosts.sh`
 
     安装并实现自动更新hosts文件，来自于[racaljk/hosts](https://raw.githubusercontent.com/racaljk/hosts/master/hosts "raw file")
@@ -46,7 +36,3 @@
     ![](https://jm33.me/img/ss1.png)
 
     ![](https://jm33.me/img/ss3.png)
-
-- `rm.sh`
-
-    清除远程调试功能
