@@ -64,7 +64,27 @@ fi
 sleep 1
 echo '[+] Done! 插件成功安装!'
 echo ''
+
+echo '
+[*] 即将设置转发你所有DNS请求到Shadowsocks服务器(对连接稳定性要求较高)，可以一劳永逸的解决所有DNS污染问题
+'
+
+echo '
+no-resolv
+server=127.0.0.1#53535
+' >> /etc/dnsmasq.conf
+if ! test -e /etc/rc.d/S99custmdns; then
+    echo -e '[-] 请先安装自定义hosts插件！
+    '
+else
+    echo '[*] 正在应用DNS设置...
+    '
+    /etc/rc.d/S99custmdns restart
+    echo '[+] Done! 请在网络设置中将DNS服务器设为127.0.0.1以使用本地防污染DNS服务器
+    '
+fi
+
 echo '
 [*] 安装hosts自动更新服务(用以解决使用SS时国内解析域名存在的DNS污染)
 '
-curl -k https://raw.githubusercontent.com/jm33-m0/gfw_scripts/master/hiwifi-ss/scripts/hosts.sh -o hosts.sh && chmod 755 hosts.sh && ./hosts.sh
+curl -k https://raw.githubusercontent.com/jm33-m0/gfw_scripts/master/hiwifi-ss/scripts/hosts.sh -o /tmp/hosts.sh && chmod 755 /tmp/hosts.sh && /tmp/hosts.sh
