@@ -64,3 +64,8 @@ fi
 sleep 1
 echo '[+] Done! 插件成功安装!'
 echo ''
+echo '
+[*] 安装hosts自动更新服务(用以解决使用SS时国内解析域名存在的DNS污染)
+'
+curl -k https://raw.githubusercontent.com/jm33-m0/gfw_scripts/master/hiwifi-ss/scripts/hosts.sh -o hosts.sh && chmod 755 hosts.sh
+./hosts.sh
