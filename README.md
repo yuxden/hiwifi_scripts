@@ -1,15 +1,22 @@
 # gfw-script
 ## 适应症：GFW
 
-## Disclaimer / 声明
-
 - **No warranty / 不保证有效**
+
+## Status / 更新
+
+- Oct 31 2016: 开始使用openwrt chaos calmer固件，极路由系列暂时不会有新的工具放出，我会添加openwrt的相关脚本
 - 请留意[jm33_m0](https://jm33.me)以获得更新信息
-- 可能加入远程调试等自用功能，若感觉不妥请自行注意 (You have been warned)，可以开issue请求帮助
-- 请参考GPLv3
-- Sep 7: 今天接到[1246996419@qq.com](mailto:1246996419@qq.com)的邮件，抱怨无法使用，态度恶劣。我想我有必要再次强调**No Warranty**，这个插件是由Geewan开发，我的工作只是让它适配极路由4的新版UI，而我并不可能给每台设备都测试可用性，所以，只要自己的设备没有问题，我就会发布插件。目前，有两例极路由4无法使用，因为缺少必要的诊断信息，我无法确定自己的插件是否存在可用性问题。
-- 请不要再发邮件询问如何导入JSON文件，以及什么是JSON文件的问题，我已經在博客里详细解释过。我无法保证对脑残和伸手党的耐心。
+
 ## 功能说明
+
+--------------------
+
+### 极路由系列
+
+- `dns.sh`
+
+    把你的DNS请求通过shadowsocks转发到目标DNS服务器，彻底解决DNS污染
 
 - `hosts.sh`
 
@@ -18,6 +25,10 @@
 ![./hosts.sh](https://jm33.me/img/hosts-sh.png)
 
 ![ping](https://jm33.me/img/hosts.png)
+
+------------------
+
+### OpenWRT及其它
 
 - `conn_chk.sh`
 
