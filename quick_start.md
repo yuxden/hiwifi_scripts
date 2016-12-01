@@ -1,10 +1,12 @@
 # Quick Start (for Windows users)
+> Using **Shadowsocks Plus on Windows**
 
 -----------------------------------------
 ## 主程序 / Shadowsocks-Plus for Windows
 
 - [Download here](https://github.com/shadowsocks-plus/Shadowsocks-Plus-Win/releases)
 > Choose the latest version, it might look like `ssp-gui-v0.1.2.5.zip`
+> In case it doesn't run, please make sure you have the latest [.Net Framework](https://www.microsoft.com/net/download) installed with your Windows system
 
 - 按照你的具体情况输入服务器配置信息，确认无误后点击`Run` / Configure your server credentials and click `Run`
 
