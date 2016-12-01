@@ -22,7 +22,7 @@
 
 - 如图，请选择SOCKS5代理，远程DNS解析，服务器地址`127.0.0.1` ，端口`1088` (如果你在主程序界面设置的`Local port`是其它值，请把这里的端口和它**保持一致**) / Fill in the blanks as the screenshot shown below (make sure you use the same config from what you entered in the Shadowsocks program)
 
-![firefox proxy](/img/firefox_proxy.png)
+![firefox proxy](/img/firefox_proxy.jpg)
 
 ## Chrome浏览器 / Chrome
 > 如果你没有，请自行下载安装，[天极网Chrome下载页面](http://mydown.yesky.com/desktop/gamedesk/manhuakatong/318/416318.shtml) / You can find a download link [Here](http://mydown.yesky.com/desktop/gamedesk/manhuakatong/318/416318.shtml) (Use it only if you don't have access to any other official download pages)
