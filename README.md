@@ -3,6 +3,8 @@
 
 - **No warranty / 不保证有效**
 - **Discontinued / 已不再可以保证最新固件上的可用性**
+
+
 > 请移步[qiwihui/hiwifi-ss](https://github.com/qiwihui/hiwifi-ss)
 > 补充说明：[https://github.com/jm33-m0/gfw_scripts/issues/8](https://github.com/jm33-m0/gfw_scripts/issues/8)
 
