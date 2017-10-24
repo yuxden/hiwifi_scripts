@@ -29,7 +29,7 @@ set up your vpn connection
 
 ![import cert](./img/android_import.jpg)
 
-![uri](./img/android_add.jpg)
+![uri](./img/android_uri.jpg)
 
 - type the download link to your cert
 - type the password to extract cert, and make sure the cert is selected for your connection
