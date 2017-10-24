@@ -45,19 +45,19 @@ download Cisco Anyconnect app from App Store
 
 ![untrusted](./img/ios_allow_untrusted.jpg)
 
+- go back to `Home` tab, create new VPN
+
+![new vpn](./img/ios_create_vpn.jpg)
+
+- type server address
+- save your VPN profile
 - in `Diagnostics` tab, import your user cert,
 
 ![user cert](./img/ios_user_cert.jpg)
 
 - import user cert from given URI, you will need a password to extract your cert
-- go back to `Home` tab, create new VPN
-
-![new vpn](./img/ios_create_vpn.jpg)
-
-- type server address, then tap `Advanced`
-- tap `Certificate`, then choose your user cert
-- save your VPN profile and try to connect
-
+- edit your newly created VPN profile, make sure it uses your user cert for authentication
+- try connecting
 
 # BB10 version
 
