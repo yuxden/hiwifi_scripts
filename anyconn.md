@@ -1,6 +1,9 @@
-# How to Use Cisco Anyconnect VPN
+# How to Use Cisco Anyconnect VPN 
+(Certificate based authentication)
 
 - [Read me](#read-me)
+  - [Disclaimer](#disclaimer)
+  - [Error?](#error)
 - [Windows PC](#windows-pc)
 - [Android](#android)
 - [iOS](#ios)
@@ -8,6 +11,11 @@
 
 ## Read me
 
+### disclaimer
+
+i've tested Android and Windows version myself, but i can't guarantee the accuracy of my tutorials for iOS and BB10 since i don't have those devices, and the screenshots are contributions from other users
+
+### Error?
 - if you get `untrusted server blocked` error, tap `change settings`, then uncheck `block untrusted servers`
 - whenever prompted `do you wish to proceed`, yes you want to
 
