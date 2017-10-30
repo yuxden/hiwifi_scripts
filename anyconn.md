@@ -1,8 +1,22 @@
-# Read me
+# Contents
+
+- [Read me](#read-me)
+- [Windows PC](#windows-pc)
+- [Android](#android)
+- [iOS](#ios)
+- [BB10](#bb10)
+
+## Read me
+
 - if you get `untrusted server blocked` error, tap `change settings`, then uncheck `block untrusted servers`
 - whenever prompted `do you wish to proceed`, yes you want to
 
-# Android version
+## Windows PC
+
+[download link](https://jm33.me/files/anyconnect-win-3.1.13015-pre-deploy-k9.msi)
+
+
+## Android
 
 [download link](https://jm33.me/files/com.cisco.anyconnect.vpn.android.avf_4.0.09029-345_minAPI14.apk) (if you were able to downoad it from other trusted sources, you can download it yourself)
 
@@ -36,7 +50,7 @@ set up your vpn connection
 - save your vpn profile
 - connect
 
-# iOS version
+## iOS
 
 download Cisco Anyconnect app from App Store
 
@@ -59,7 +73,7 @@ download Cisco Anyconnect app from App Store
 - edit your newly created VPN profile, make sure it uses your user cert for authentication
 - try connecting
 
-# BB10 version
+## BB10
 
 download Cisco Anyconnect from BB World
 
