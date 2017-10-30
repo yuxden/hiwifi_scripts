@@ -1,41 +1,57 @@
-##TL; DR
+# gfw-script
+### 一些用来建设**更正常网络环境**的脚本
 
-- 最近极路由发布了极4, 其基于OpenWrt的固件也做了较大幅度的升级，之前的ss插件基本上都已经无法正常使用
+- **No warranty / 不保证有效**
+- **Discontinued / 已不再可以保证最新固件上的可用性**
 
-- 所以我在*[极路由Shadowsocks家庭无痛翻墙实践](https://luolei.org/hiwifi-shadowsocks/)*的基础上针对新的极路由官方固件做了修改，主要工作包括：
 
-    - 升级了老旧的ss-libev到今年6月的最新版本
-    - 改写了适配老版本极路由固件的web控制面板
-    - 加入了自己的一些东西以及删掉自己认为没用的东西
+> 请移步[qiwihui/hiwifi-ss](https://github.com/qiwihui/hiwifi-ss)
+> 补充说明：[https://github.com/jm33-m0/gfw_scripts/issues/8](https://github.com/jm33-m0/gfw_scripts/issues/8)
 
-- 为什么不用OpenWrt？嗯，我之前一直在用，然而极3用OpenWrt会出现WLAN速度缩水的问题，最终无法忍受而换回原版固件，这也是本文诞生的主要原因了。。
+## Status / 更新
 
-##How to install
+- Oct 30 2017: 增加基于证书认证的[Cisco Anyconnect VPN教程](https://jm33.me/ru-he-shi-yong-cisco-anyconnect-vpn-ji-yu-zheng-shu-de-ren-zheng.html)
+- Feb 22 2017: 目前在极路由3上使用LEDE项目，推荐有动手能力的用户尝试，请参考[https://jm33.me/ji-lu-you-3-lede-shadowsocks-mentohust-han-suo-xu-wen-jian-tarballxia-zai.html](https://jm33.me/ji-lu-you-3-lede-shadowsocks-mentohust-han-suo-xu-wen-jian-tarballxia-zai.html)
+- Oct 31 2016: 开始使用openwrt chaos calmer固件，极路由系列暂时不会有新的工具放出，我会添加openwrt的相关脚本
+- 请留意[jm33_m0](https://jm33.me)以获得更新信息
 
->如果你希望看到源码，请点击[Github](https://github.com/jm33-m0/hiwifi_scripts/)。以下仅仅是安装指导
+## 功能说明
 
-###Step 1. 开启极路由开发者模式
+--------------------
 
-- 安装Shadowsocks插件需要开启开发者权限。请参考[这里](http://bbs.hiwifi.com/thread-74899-1-1.html "极路由官方论坛开发者模式指南")，有十分详细的教程。
+### 极路由系列
 
-###Step 2. SSH登录极路由
+- `dns.sh`
 
-- 在Windows上，你需要使用PuTTY获得SSH的功能
+    把你的DNS请求通过shadowsocks转发到目标DNS服务器，彻底解决DNS污染
 
-- 你可以从[这里](https://jm33.me/files/putty-0.67-installer.msi)下载到PuTTY，然后使用它通过SSH登录到你的极路由。
+- `hosts.sh`
 
-- 什么？你不会用？
+    安装并实现自动更新hosts文件，来自于[racaljk/hosts](https://raw.githubusercontent.com/racaljk/hosts/master/hosts "raw file")
 
-    > 嗯。。我给你一个[教程](http://jingyan.baidu.com/article/e73e26c0eb063324adb6a737.html)
+![./hosts.sh](https://jm33.me/img/hosts-sh.png)
 
-- 登录
+![ping](https://jm33.me/img/hosts.png)
 
-    `ssh root@192.168.199.1 -p 1022  #使用root帐号连接路由，端口为1022，密码为后台登陆密码`
+- `shadow.sh`
 
-###Step 3. 运行脚本来安装插件
+    安装Shadowsocks插件，请参考[jm33_m0 - 极路由4使用Shadowsocks插件（含web配置面板）](https://jm33.me/ji-lu-you-4shi-yong-shadowsockscha-jian-han-webpei-zhi-mian-ban.html)
 
-- 使用如下命令：
+    ![](https://jm33.me/img/ss1.png)
 
-    `cd /tmp && curl -k -o ss.tar.gz https://jm33.me/files/shadow.sh && sh shadow.sh && rm shadow.sh`
+    ![](https://jm33.me/img/ss3.png)
+------------------
 
-- 看一下输出信息，一切正常的话就可以去路由器管理页面开始使用了
+### OpenWRT及其它
+
+- `conn_chk.sh`
+
+    检测国内外网络连接
+
+- `pac-gfwlist`
+
+    PAC文件，来自[Cloverr0/pac-gfwlist](https://github.com/Cloverr0/pac-gfwlist)
+
+- `paste.sh`
+
+    粘贴文本到[Pastebin](http://pastebin.com)
