@@ -1,10 +1,11 @@
-# How to Use Cisco Anyconnect VPN 
+# How to Use Cisco Anyconnect VPN
+
 (Certificate based authentication)
 
 - [Read me](#read-me)
-  - [Disclaimer](#disclaimer)
-  - [Error?](#error)
-  - [Trusted downloads](#trusted-downloads)
+    - [Disclaimer](#disclaimer)
+    - [Error?](#error)
+    - [Trusted Downloads](#trusted-downloads)
 - [Windows PC](#windows-pc)
 - [Android](#android)
 - [iOS](#ios)
@@ -14,20 +15,66 @@
 
 ### Disclaimer
 
-i've tested Android and Windows version myself, but i can't guarantee the accuracy of my tutorials for iOS and BB10 since i don't have those devices, and the screenshots are contributions from other users
+- i've tested Android and Windows version myself, but i can't guarantee the accuracy of my tutorials for **iOS and BB10** since i don't have those devices, and the screenshots are contributions from other users
 
-### Error?
+### Error
+
+- keep your software **updated**, use **Windows 7 or above**, and always make sure your system is up to date
+
+> i will ignore any error reports that's already solved in latest software release
+
+- **follow exactly what the tutorial says**
+
+- **DO NOT change anything you don't understand**, stupid questions like "what should i do in this step, your tutorial didn't mention that" will be ignored
+
+> be smart and read the tutorial carefully before asking anything
+
 - if you get `untrusted server blocked` error, tap `change settings`, then uncheck `block untrusted servers`
-- whenever prompted `do you wish to proceed`, yes you want to
+- whenever prompted `do you wish to proceed`, **yes you want to**
 
 ### Trusted Downloads
 
-[https://network.fiu.edu/vpn/](https://network.fiu.edu/vpn/)
+- [https://network.fiu.edu/vpn/](https://network.fiu.edu/vpn/)
+- [https://jm33.me/pages/fgfw.html](https://jm33.me/pages/fgfw.html)
 
 ## Windows PC
 
 [download link](https://jm33.me/files/anyconnect-win-3.1.13015-pre-deploy-k9.msi)
 
+- install the client on your PC
+- download your cert
+
+![cert download](./img/anyc_win/download_cert.jpg)
+
+- install your cert
+
+![cert install](./img/anyc_win/cert_pass.jpg)
+
+![cert success](./img/anyc_win/cert_success.jpg)
+
+- find and open Cisco Anyconnect
+
+![find cisco](./img/anyc_win/find_cisco.jpg)
+
+![open cisco](./img/anyc_win/open_cisco.jpg)
+
+- go to settings and **uncheck** `Block connections to untrusted servers`
+
+![vpn settings](./img/anyc_win/vpn_settings.jpg)
+
+- save changes and type server address to connect
+
+![connect](./img/anyc_win/connect.jpg)
+
+- whatever it says, **CONNECT ANYWAY**
+
+![connect anyway](./img/anyc_win/connect_anyway.jpg)
+
+![connect anyway1](./img/anyc_win/connect_anyway_1.jpg)
+
+- success
+
+![success](./img/anyc_win/connected.jpg)
 
 ## Android
 
@@ -92,9 +139,9 @@ download Cisco Anyconnect from BB World
 
 set up vpn
 
-1. install Anyconnect app, then go to vpn settings
-2. download cert from given URL, then type the password to extract
-3. choose Cisco Anyconnect as your VPN type
-4. allow untrusted servers
-5. type server address
-6. save and connect
+- install Anyconnect app, then go to vpn settings
+- download cert from given URL, then type the password to extract
+- choose Cisco Anyconnect as your VPN type
+- allow untrusted servers
+- type server address
+- save and connect
