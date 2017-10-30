@@ -11,13 +11,17 @@
 
 ## Read me
 
-### disclaimer
+### Disclaimer
 
 i've tested Android and Windows version myself, but i can't guarantee the accuracy of my tutorials for iOS and BB10 since i don't have those devices, and the screenshots are contributions from other users
 
 ### Error?
 - if you get `untrusted server blocked` error, tap `change settings`, then uncheck `block untrusted servers`
 - whenever prompted `do you wish to proceed`, yes you want to
+
+### Trusted Downloads
+
+[https://network.fiu.edu/vpn/](https://network.fiu.edu/vpn/)
 
 ## Windows PC
 
