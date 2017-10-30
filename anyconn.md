@@ -4,6 +4,7 @@
 - [Read me](#read-me)
   - [Disclaimer](#disclaimer)
   - [Error?](#error)
+  - [Trusted downloads](#trusted-downloads)
 - [Windows PC](#windows-pc)
 - [Android](#android)
 - [iOS](#ios)
