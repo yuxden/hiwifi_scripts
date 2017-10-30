@@ -10,6 +10,7 @@
 
 ## Status / 更新
 
+- Oct 30 2017: 增加基于证书认证的[Cisco Anyconnect VPN教程](https://jm33.me/ru-he-shi-yong-cisco-anyconnect-vpn-ji-yu-zheng-shu-de-ren-zheng.html)
 - Feb 22 2017: 目前在极路由3上使用LEDE项目，推荐有动手能力的用户尝试，请参考[https://jm33.me/ji-lu-you-3-lede-shadowsocks-mentohust-han-suo-xu-wen-jian-tarballxia-zai.html](https://jm33.me/ji-lu-you-3-lede-shadowsocks-mentohust-han-suo-xu-wen-jian-tarballxia-zai.html)
 - Oct 31 2016: 开始使用openwrt chaos calmer固件，极路由系列暂时不会有新的工具放出，我会添加openwrt的相关脚本
 - 请留意[jm33_m0](https://jm33.me)以获得更新信息
